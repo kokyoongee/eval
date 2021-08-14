@@ -16,7 +16,7 @@ BONUS_SRCS = srcs/checker/ft_checker.c srcs/checker/ft_check_sorted.c srcs/get_n
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -g -Wall -Wextra -Werror
 
 INCS = includes
 

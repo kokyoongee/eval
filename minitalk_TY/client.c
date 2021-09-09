@@ -1,19 +1,19 @@
 #include "minitalk.h"
 
-void	msgreceived(int signo)
+void msgreceived(int signo)
 {
 	if (signo == SIGUSR1)
-		ft_putstr(GREEN"Message received and printed ✔✔✔\n"RESET);
+		ft_putstr(GREEN "Message received and printed ✔✔✔\n" RESET);
 }
 
-void	send_sig(int pid, char *s, size_t len)
+void send_sig(int pid, char *s, size_t len)
 {
-	size_t	i;
-	int		bits;
-	char	c;
-	int		sent;
+	size_t i;
+	int bits;
+	char c;
+	int sent;
 
-	ft_putstr(CYAN"Sending message...\n"RESET);
+	ft_putstr(CYAN "Sending message...\n" RESET);
 	i = 0;
 	while (i <= len)
 	{
@@ -26,18 +26,18 @@ void	send_sig(int pid, char *s, size_t len)
 			else
 				sent = kill(pid, SIGUSR1);
 			bits--;
-			usleep(100);
+			usleep(1000);
 		}
 		i++;
 	}
 	if (sent != 0)
-		ft_putstr(RED"Error, server doesn't exist\n"RESET);
+		ft_putstr(RED "Error, server doesn't exist\n" RESET);
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int					pid;
-	struct sigaction	sa;
+	int pid;
+	struct sigaction sa;
 
 	if (argc == 3)
 	{
@@ -49,5 +49,5 @@ int	main(int argc, char **argv)
 		send_sig(pid, argv[2], ft_strlen(argv[2]));
 	}
 	else
-		ft_putstr(YELLOW"Usage: [./client][pid][message]\n"RESET);
+		ft_putstr(YELLOW "Usage: [./client][pid][message]\n" RESET);
 }

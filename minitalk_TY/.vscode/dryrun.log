@@ -1,0 +1,8 @@
+make all --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY'
+make -C ./libft
+gcc -g -Wall -Werror -Wextra -I. server.c libft/libft.a -o server
+gcc -g -Wall -Werror -Wextra -I. client.c libft/libft.a -o client
+echo "Compiling server.c & client.c..."
+make: Leaving directory `/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY'
+ 

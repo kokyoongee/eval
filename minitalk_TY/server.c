@@ -1,16 +1,16 @@
 #include "minitalk.h"
 #include <stdio.h>
 
-void	receive_sig(int signo, siginfo_t *info, void *context)
+void receive_sig(int signo, siginfo_t *info, void *context)
 {
-	static char	c;
-	static int	bit;
-	static int	first;
+	static char c;
+	static int bit;
+	static int first;
 
 	(void)context;
 	if (first == OFF)
 	{
-		ft_putstr(GREEN"Incoming message : \033[0m\n"RESET);
+		ft_putstr(GREEN "Incoming message : \033[0m\n" RESET);
 		first = ON;
 	}
 	c = (c << 1) + (signo & 1);
@@ -20,7 +20,7 @@ void	receive_sig(int signo, siginfo_t *info, void *context)
 		if (c == 0)
 		{
 			kill(info->si_pid, SIGUSR1);
-			ft_putstr(PURPLE"\n--Message successfully printed--\n"RESET);
+			ft_putstr(PURPLE "\n--Message successfully printed--\n" RESET);
 			first = OFF;
 		}
 		c = 0;
@@ -28,11 +28,11 @@ void	receive_sig(int signo, siginfo_t *info, void *context)
 	}
 }
 
-int	main(void)
+int main(void)
 {
-	struct sigaction	sa;
+	struct sigaction sa;
 
-	ft_putstr(CYAN"server pid : "YELLOW);
+	ft_putstr(CYAN "server pid : " YELLOW);
 	ft_putnbr(getpid());
 	ft_putstr(RESET);
 	ft_putchar('\n');

@@ -1,0 +1,30 @@
+{
+	"makefile.extensionOutputFolder": "./.vscode",
+	"C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY",
+			"binaryPath": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY/client",
+			"binaryArgs": [
+				"-h"
+			]
+		},
+		{
+			"cwd": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY",
+			"binaryPath": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY/server",
+			"binaryArgs": [
+				"-h"
+			]
+		},
+		{
+			"cwd": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY",
+			"binaryPath": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY/client",
+			"binaryArgs": []
+		},
+		{
+			"cwd": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY",
+			"binaryPath": "/Users/eekokyoong/Desktop/42Core/eval/minitalk_TY/server",
+			"binaryArgs": []
+		}
+	]
+}

@@ -1,9 +1,9 @@
 SERVER	=	server
 CLIENT	=	client
 LIBFT	=	libft/libft.a
-CFLAGS	=	gcc -Wall -Werror -Wextra -I.
+CFLAGS	=	gcc -g -Wall -Werror -Wextra -I.
 
-all:	
+all:
 		@make -C ./libft
 		@$(CFLAGS) server.c $(LIBFT) -o $(SERVER)
 		@$(CFLAGS) client.c $(LIBFT) -o $(CLIENT)
